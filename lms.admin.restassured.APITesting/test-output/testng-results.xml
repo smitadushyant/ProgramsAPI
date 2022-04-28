@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-11T16:00:22 PST" name="Default suite" finished-at="2022-01-11T16:00:30 PST" duration-ms="8187">
+    <groups>
+    </groups>
+    <test started-at="2022-01-11T16:00:22 PST" name="Default test" finished-at="2022-01-11T16:00:30 PST" duration-ms="8187">
+      <class name="lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest@55634720]" started-at="2022-01-11T16:00:22 PST" name="beforeTest" finished-at="2022-01-11T16:00:25 PST" duration-ms="3434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="GETAllProgram()[pri:0, instance:lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest@55634720]" started-at="2022-01-11T16:00:25 PST" name="GETAllProgram" finished-at="2022-01-11T16:00:27 PST" duration-ms="1270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GETAllProgram -->
+        <test-method signature="GETRecordforProgramID()[pri:0, instance:lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest@55634720]" started-at="2022-01-11T16:00:27 PST" name="GETRecordforProgramID" finished-at="2022-01-11T16:00:27 PST" duration-ms="701" status="FAIL">
+          <exception class="io.restassured.path.json.exception.JsonPathException">
+            <message>
+              <![CDATA[Failed to parse the JSON document]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+at lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest.ValidateProgramIDRecord(LMS_ProrgramsCRUDTest.java:63)
+at lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest.GETRecordforProgramID(LMS_ProrgramsCRUDTest.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: groovy.json.JsonException: A JSON payload should start with an openning curly brace '{' or an openning square bracket '['.
+Instead, 'null' was found on line: 1, column: 1
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:114)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
+at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GETRecordforProgramID -->
+        <test-method signature="POSTProgram()[pri:0, instance:lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest@55634720]" started-at="2022-01-11T16:00:27 PST" name="POSTProgram" finished-at="2022-01-11T16:00:29 PST" duration-ms="1341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- POSTProgram -->
+        <test-method signature="PUTprogram()[pri:0, instance:lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest@55634720]" started-at="2022-01-11T16:00:29 PST" name="PUTprogram" finished-at="2022-01-11T16:00:29 PST" duration-ms="711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PUTprogram -->
+        <test-method signature="deleteProgram()[pri:0, instance:lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest@55634720]" started-at="2022-01-11T16:00:29 PST" name="deleteProgram" finished-at="2022-01-11T16:00:30 PST" duration-ms="685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteProgram -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest@55634720]" started-at="2022-01-11T16:00:30 PST" name="afterTest" finished-at="2022-01-11T16:00:30 PST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- lms.admin.restassured.APITesting.LMS_ProrgramsCRUDTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
